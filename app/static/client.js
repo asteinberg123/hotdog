@@ -28,7 +28,7 @@ function analyze() {
   xhr.onload = function(e) {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
-      el("result-label").innerHTML = "=`Result = ${response['result']}`;  
+      el("result-label").innerHTML =`Result = ${response['result']}`;  
       var resp = parseFloat(response);
         if (resp > 0.9){
          el("result-label").innerHTML = "You've got yourself a hotdog!";
