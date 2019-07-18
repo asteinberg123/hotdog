@@ -40,7 +40,7 @@ function analyze() {
 //         el("result-label").innerHTML = `I don't think that's a hotdog.`;
         
         
-    el("result-label").innerHTML = `Result = ${response["data"]}`;
+    el("result-label").innerHTML = `Result = ${response["predict"]}`;
     }
     el("analyze-button").innerHTML = "Analyze";
   };
