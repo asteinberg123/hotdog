@@ -27,8 +27,8 @@ function analyze() {
     alert(xhr.responseText);
   };
   xhr.onload = function(e) {
-   // if (this.readyState === 4) {
-      var response = JSON.parse(e.target.responseText);
+    if (this.readyState === 4) {
+      //var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = "Result";  
 /*      var resp = parseFloat(response);
         if (resp > 0.9){
@@ -43,7 +43,7 @@ function analyze() {
         
         
     
-    //}
+    }
     el("analyze-button").innerHTML = "Analyze";
   };
 
