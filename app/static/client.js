@@ -39,7 +39,7 @@ function analyze() {
 //         el("result-label").innerHTML = `I don't think that's a hotdog.`;
         
         
-     el("result-label").innerHTML = `Result = ${response["result"]}`;
+     el("result-label").innerHTML = `Result = ${response["data"]}`;
     }
     el("analyze-button").innerHTML = "Analyze";
   };
