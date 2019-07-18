@@ -65,7 +65,7 @@ async def analyze(request):
     prediction,outputs = learn.predict(img)[0]
     x=outputs[0].item()
     y=round(x*100,2)
-    return JSONResponse({'data':float(y)})
+    return JSONResponse({'data':str(y)})
 
     #return JSONResponse({'result': str(prediction)})
 
