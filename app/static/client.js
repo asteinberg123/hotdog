@@ -1,6 +1,6 @@
 var el = x => document.getElementById(x);
 
-function showPicker() {
+function showPicker() { 
   el("file-input").click();
 }
 
