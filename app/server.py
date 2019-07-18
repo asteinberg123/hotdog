@@ -62,7 +62,7 @@ async def analyze(request):
     img_data = await request.form()
     img_bytes = await (img_data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    prediction,outputs = learn.predict(img)[0]
+    pred_class,pred_idx,outputs = learn.predict(img)[0]
     pred=(outputs[0].item())
     pred=pred*100
     pred1=round(pred,2)
