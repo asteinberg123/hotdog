@@ -66,7 +66,7 @@ async def analyze(request):
     pred=float(outputs[0].item())
     pred=round(pred*100,2)
     prediction=str(pred)
-    return JSONResponse({'result':str(y)})
+    return JSONResponse({'result':str(prediction)})
 
     #return JSONResponse({'result': str(prediction)})
 
