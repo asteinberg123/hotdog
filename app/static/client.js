@@ -32,13 +32,13 @@ function analyze() {
       el("result-label").innerHTML = "Result";  
 /*      var resp = parseFloat(response);
         if (resp > 0.9){
-         el("result-label").innerHTML = `You've got yourself a hotdog!";
+         el("result-label").innerHTML = "You've got yourself a hotdog!";
        }else if(resp > 0.5){
-          el("result-label").innerHTML = `I'd say there's about a ` + response + `percent chance of that being a hotdog.`;
+          el("result-label").innerHTML = "I'd say there's about a " + resp + "percent chance of that being a hotdog.";
         }else if(resp < 0.2){
-         el("result-label").innerHTML = `Are you kidding me?  You thought that was a hotdog?`;
+         el("result-label").innerHTML = "Are you kidding me?  You thought that was a hotdog?";
        }else if(resp <= 0.5){
-         el("result-label").innerHTML = `I don't think that's a hotdog.`;
+         el("result-label").innerHTML = "I don't think that's a hotdog.";
       = ${response["result"]}`;  */
         
         
