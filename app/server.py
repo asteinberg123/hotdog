@@ -56,11 +56,11 @@ async def homepage(request):
     html_file = path / 'view' / 'index.html'
     return HTMLResponse(html_file.open().read())
 
-@app.route('/analyze', methods=['POST'])
-async def analyze(request):
-    img_data = await request.form()
-    img_bytes = await (img_data['file'].read())
-    img = open_image(BytesIO(img_bytes))
+# @app.route('/analyze', methods=['POST'])
+# async def analyze(request):
+#     img_data = await request.form()
+#     img_bytes = await (img_data['file'].read())
+#     img = open_image(BytesIO(img_bytes))
 #     pred_class,pred_idx,outputs = learn.predict(img)[0]
 #     pred = (outputs[0].item())
 #     pred2 = pred*100
@@ -68,8 +68,14 @@ async def analyze(request):
 #     prediction = str(pred1)
 #     responsedata = {'result': str(prediction)}
 #     return JSONResponse(responsedata)
+@app.route('/analyze', methods=['POST'])
+async def analyze(request):
+    img_data = await request.form()
+    img_bytes = await (img_data['file'].read())
+    img = open_image(BytesIO(img_bytes))
     prediction = learn.predict(img)[0]
-    return JSONResponse({'result': str(prediction)}
+    return JSONResponse({'result': str(prediction)})
+
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
