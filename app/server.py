@@ -67,7 +67,8 @@ async def analyze(request):
     pred=pred*100
     pred1=round(pred,2)
     prediction=str(pred1)
-    return JSONResponse({str(prediction)})
+    responsedata = {'result': str(prediction)}
+    return JSONResponse(responsedata)
 
     #return JSONResponse({'result': str(prediction)})
 
