@@ -28,8 +28,8 @@ function analyze() {
   xhr.onload = function(e) {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
-      el("result-label").innerHTML =`Result = ${response['result']}`;  
-      var resp = parseFloat(response);
+      el("result-label").innerHTML = `Result = ${response["result"]}`;
+      /*var resp = parseFloat(response);
         if (resp > 0.9){
          el("result-label").innerHTML = "You've got yourself a hotdog!";
        }else if(resp > 0.5){
@@ -37,7 +37,7 @@ function analyze() {
         }else if(resp < 0.2){
          el("result-label").innerHTML = "Are you kidding me?  You thought that was a hotdog?";
        }else if(resp <= 0.5){
-         el("result-label").innerHTML = "I don't think that's a hotdog.";        
+         el("result-label").innerHTML = "I don't think that's a hotdog."; */       
            
     }
     el("analyze-button").innerHTML = "Analyze";
