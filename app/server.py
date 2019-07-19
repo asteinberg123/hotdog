@@ -65,7 +65,7 @@ async def homepage(request):
     pred = (outputs[0].item())
     pred2 = pred*100
     pred1 = round(pred2,2)
-    prediction = (pred1)
+    prediction = pred1
     #responsedata = {'result': str(prediction)}
     return JSONResponse({'result': str(prediction)})
 # @app.route('/analyze', methods=['POST'])
