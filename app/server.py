@@ -65,9 +65,9 @@ async def homepage(request):
     pred = (outputs[0].item())
     pred2 = pred*100
     pred1 = round(pred2,2)
-    prediction = str(pred1)
-    responsedata = {'result': str(prediction)}
-    return JSONResponse(responsedata)
+    prediction = (pred1)
+    #responsedata = {'result': str(prediction)}
+    return JSONResponse({'result': str(prediction)})
 # @app.route('/analyze', methods=['POST'])
 # async def analyze(request):
 #     img_data = await request.form()
