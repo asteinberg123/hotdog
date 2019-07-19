@@ -29,7 +29,7 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       //el("result-label").innerHTML = `Result = ${response["result"]}`;
-      var resp = parseFloat(${response["result"]});
+      var resp = parseFloat(${response["result"]}));
         if (resp > 90.00){
          el("result-label").innerHTML = "You've got yourself a hotdog!";
        }else if(resp > 50.00){
