@@ -29,9 +29,10 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Result = ${response["result"]}`;
-      //var respo = `${response["result"]}`;
+      var respo = ${response["result"]};
       //el("result-label").innerHTML = `Result = respo`;
-//       var resp = parseFloat(respo);
+      var resp = parseFloat(respo);
+      el("result-label").innerHTML = `Result = resp`;
 //         if (resp > 90.00){
 //          el("result-label").innerHTML = "You've got yourself a hotdog!";
 //        }else if(resp > 50.00){
@@ -48,7 +49,7 @@ function analyze() {
   var fileData = new FormData();
   fileData.append("file", uploadFiles[0]);
   xhr.send(fileData);
-  }
+  //}
 }
 
 
