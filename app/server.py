@@ -56,22 +56,22 @@ async def homepage(request):
     html_file = path / 'view' / 'index.html'
     return HTMLResponse(html_file.open().read())
 
-@app.route('/analyze', methods=['POST'])
-async def analyze(request):
-    img_data = await request.form()
-    img_bytes = await (img_data['file'].read())
-    img = open_image(BytesIO(img_bytes))
-    prediction1 = learn.predict(img)[2]
-    pred1 = round(prediction[0].item()*100,2)
-    prediction = str(pred1)
-    return JSONResponse(prediction,safe=False)
 # @app.route('/analyze', methods=['POST'])
 # async def analyze(request):
 #     img_data = await request.form()
 #     img_bytes = await (img_data['file'].read())
 #     img = open_image(BytesIO(img_bytes))
-#     prediction = learn.predict(img)[0]
-#     return JSONResponse({'result': str(prediction)})
+#     prediction1 = learn.predict(img)[2]
+#     pred1 = round(prediction[0].item()*100,2)
+#     prediction = str(pred1)
+#     return JSONResponse(prediction,safe=False)
+@app.route('/analyze', methods=['POST'])
+async def analyze(request):
+    img_data = await request.form()
+    img_bytes = await (img_data['file'].read())
+    img = open_image(BytesIO(img_bytes))
+    prediction = learn.predict(img)[2]
+    return JSONResponse({'result': str(prediction)})
 
 
 if __name__ == '__main__':
