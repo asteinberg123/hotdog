@@ -48,7 +48,7 @@ function analyze() {
   var fileData = new FormData();
   fileData.append("file", uploadFiles[0]);
   xhr.send(fileData);
- }
+ //}
 }
 
 
