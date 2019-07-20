@@ -61,12 +61,10 @@ async def analyze(request):
     img_data = await request.form()
     img_bytes = await (img_data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    pred_class,pred_idx,outputs = learn.predict(img)[0]
-    pred = (outputs[0].item())
-    pred2 = pred*100
-    pred1 = round(pred2,2)
+    prediction1 = learn.predict(img)[2]
+    pred1 = round(prediction[0].item()*100,2)
     prediction = str(pred1)
-    return JSONResponse({'prediction'})
+    return JSONResponse(prediction,safe=False)
 # @app.route('/analyze', methods=['POST'])
 # async def analyze(request):
 #     img_data = await request.form()
