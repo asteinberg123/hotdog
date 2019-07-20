@@ -37,16 +37,17 @@ function analyze() {
     //el("result-label").innerHTML = `Result =` + resp;
      // var abctr = 'abc'
      // el("result-label").innerHTML = abctr
-         if (resp > 90.00){
-          el("result-label").innerHTML = "You've got yourself a hotdog!";
-        }else if(resp > 50.00){
-           el("result-label").innerHTML = "I'd say there's about a " + respo + "percent chance of that being a hotdog.";
-        }else if(resp < 20.00){
-          el("result-label").innerHTML = "Are you kidding me?  You thought that was a hotdog?";
-        }else if(resp <= 50.00){
-         el("result-label").innerHTML = "I don't think that's a hotdog.";    
+      el("result-label").innerHTML = respo;
+//          if (resp > 90.00){
+//           el("result-label").innerHTML = "You've got yourself a hotdog!";
+//         }else if(resp > 50.00){
+//            el("result-label").innerHTML = "I'd say there's about a " + respo + "percent chance of that being a hotdog.";
+//         }else if(resp < 20.00){
+//           el("result-label").innerHTML = "Are you kidding me?  You thought that was a hotdog?";
+//         }else if(resp <= 50.00){
+//          el("result-label").innerHTML = "I don't think that's a hotdog.";    
        
-        }
+//         }
            
     }
     el("analyze-button").innerHTML = "Analyze";
