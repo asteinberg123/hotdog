@@ -72,7 +72,7 @@ async def analyze(request):
     img = open_image(BytesIO(img_bytes))
     prediction1 = learn.predict(img)[2]
     prediction2 = round(prediction1[0].item(),2)
-    prediction = prediction2*100.00)
+    prediction = prediction2*100.00
     return JSONResponse({'result': str(prediction)})
 
 
