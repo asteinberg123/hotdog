@@ -28,7 +28,7 @@ function analyze() {
   xhr.onload = function(e) {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
-      var resp = parseFloat(`Result = ${response["result"]}`);
+      var resp = parseFloat(`${response["result"]}`);
       //el("result-label").innerHTML = `Result = ${response["result"]}% hotdog.`;
       //el("result-label").innerHTML = resp;
       //var respo = {response["result"]};
