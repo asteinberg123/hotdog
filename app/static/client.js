@@ -32,7 +32,7 @@ function analyze() {
       var respo = `${response["result"]}`;
       //el("result-label").innerHTML = `Result = respo`;
       var resp = parseFloat(respo);
-    //  el("result-label").innerHTML = `Result = resp`;
+    el("result-label").innerHTML = `Result =` + resp;
      // var abctr = 'abc'
      // el("result-label").innerHTML = abctr
 //         if (resp > 90.00){
