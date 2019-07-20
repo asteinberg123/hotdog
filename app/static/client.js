@@ -29,9 +29,9 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       //resp = parseFloat(`Result = ${response["result"]}`);
-      el("result-label").innerHTML = `Result = ${response["result"]} % hotdog.` + ;
+      el("result-label").innerHTML = `Result = ${response["result"]} %hotdog.`;
       //el("result-label").innerHTML = resp;
-      //var respo = `Result = ${response["result"]}`;
+      //var respo = {response["result"]};
       //el("result-label").innerHTML = `Result = respo`;
       //var resp = parseFloat(respo);
     //el("result-label").innerHTML = `Result =` + resp;
