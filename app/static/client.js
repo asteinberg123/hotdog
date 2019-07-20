@@ -29,7 +29,7 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       //el("result-label").innerHTML = `Result = ${response["result"]}`;
-      var respo = `(${response["result"]})`;
+      var respo = `(${response[prediction]})`;
       el("result-label").innerHTML = `Result = respo`;
       var resp = parseFloat(respo)
         if (resp > 90.00){
