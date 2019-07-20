@@ -44,7 +44,9 @@ function analyze() {
         }else if(resp < 20.00){
           el("result-label").innerHTML = "Are you kidding me?  You thought that was a hotdog?";
         }else if(resp <= 50.00){
-         el("result-label").innerHTML = "I don't think that's a hotdog.";        
+         el("result-label").innerHTML = "I don't think that's a hotdog.";    
+       
+        }
            
     }
     el("analyze-button").innerHTML = "Analyze";
@@ -53,7 +55,7 @@ function analyze() {
   var fileData = new FormData();
   fileData.append("file", uploadFiles[0]);
   xhr.send(fileData);
-   }
+   
 }
 
 
