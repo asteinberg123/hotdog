@@ -41,7 +41,7 @@ function analyze() {
           if (resp > 90.00){
           el("result-label").innerHTML = "You've got yourself a hotdog!";
         }else if(resp > 50.00){
-           el("result-label").innerHTML = "I'd say there's about a " + resp + "percent chance of that being a hotdog.";
+           el("result-label").innerHTML = "I'd say there's about a " + resp + " percent chance of that being a hotdog.";
         }else if(resp < 20.00){
           el("result-label").innerHTML = "Are you kidding me?  You thought that was a hotdog?";
         }else if(resp <= 50.00){
