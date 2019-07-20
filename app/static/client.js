@@ -29,12 +29,12 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       //el("result-label").innerHTML = `Result = ${response["result"]}`;
-    //  var respo = `${response["result"]}`;
+      var respo = `${response["result"]}`;
       //el("result-label").innerHTML = `Result = respo`;
-    //  var resp = parseFloat(respo);
+      var resp = parseFloat(respo);
     //  el("result-label").innerHTML = `Result = resp`;
-      var abctr = 'abc'
-      el("result-label").innerHTML = abctr
+     // var abctr = 'abc'
+     // el("result-label").innerHTML = abctr
 //         if (resp > 90.00){
 //          el("result-label").innerHTML = "You've got yourself a hotdog!";
 //        }else if(resp > 50.00){
