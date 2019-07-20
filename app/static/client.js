@@ -29,17 +29,17 @@ function analyze() {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Result = ${response["result"]}`;
-//       var respo = `(${response["prediction"]})`;
-//       el("result-label").innerHTML = `Result = respo`;
-//       var resp = parseFloat(respo)
-//         if (resp > 90.00){
-//          el("result-label").innerHTML = "You've got yourself a hotdog!";
-//        }else if(resp > 50.00){
-//           el("result-label").innerHTML = "I'd say there's about a " + resp + "percent chance of that being a hotdog.";
-//         }else if(resp < 20.00){
-//          el("result-label").innerHTML = "Are you kidding me?  You thought that was a hotdog?";
-//        }else if(resp <= 50.00){
-//          el("result-label").innerHTML = "I don't think that's a hotdog.";        
+      var respo = `(${response["result"]})`;
+      el("result-label").innerHTML = `Result = respo`;
+      var resp = parseFloat(respo)
+        if (resp > 90.00){
+         el("result-label").innerHTML = "You've got yourself a hotdog!";
+       }else if(resp > 50.00){
+          el("result-label").innerHTML = "I'd say there's about a " + resp + "percent chance of that being a hotdog.";
+        }else if(resp < 20.00){
+         el("result-label").innerHTML = "Are you kidding me?  You thought that was a hotdog?";
+       }else if(resp <= 50.00){
+         el("result-label").innerHTML = "I don't think that's a hotdog.";        
            
     }
     el("analyze-button").innerHTML = "Analyze";
@@ -49,6 +49,7 @@ function analyze() {
   fileData.append("file", uploadFiles[0]);
   xhr.send(fileData);
  }
+}
 
 
 
